@@ -1,0 +1,44 @@
+[
+  {
+    "index": 0,
+    "picture": "https://media.istockphoto.com/id/1302436326/photo/junk-food-homemade-beef-burgers-on-vintage-wooden-background.jpg?b=1&s=170667a&w=0&k=20&c=ERNgnfbHhEQi8igA59Zt6SxM0U2Nhd4jC-abPSos3ts=",
+    "name": "Councel",
+    "description": "Counseling is a collaborative effort between the counselor and client. Professional counselors help clients identify goals and potential solutions to problems which cause emotional turmoil; seek to improve communication and coping skills; strengthen self-esteem; and promote behavior change and optimal mental health.Ideally, counseling is terminated when the problem that you pursued counseling for becomes more manageable or is resolved. However, some insurance companies and managed care plans may limit the number of sessions for which they pay. Check with your health plan to find out more about any limitations in your coverage."
+  },
+  {
+    "index": 1,
+    "picture": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGF3JTIwYWJpZGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "Hall of Justice",
+    "description": "In this continuity, the Hall of Justice was the headquarters of the Super Friends. Later, when they changed their name to 'The Super Powers Team', the Hall was remodeled to be a five-cornered star fort, although the front entrance resembled the original frontage.The Hall of Justice was constructed by the Justice League of America, a year after the destruction of the previous Justice League Watchtower, and located in Washington, D.C. and in the same location as the JSA and All-Star Squadron original headquarters. The Hall was designed by Green Lantern (John Stewart) and Wonder Woman, and financed by Batman and built from scratch by Superman."
+  },
+  {
+    "index": 2,
+    "picture": "https://images.unsplash.com/photo-1633725519534-a3b98b7b153f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGRpdm9yY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "name": "Divorce Solution",
+    "description": "Dissolution of marriage is complicated because at least six processes happen simultaneously with varying intensities. These processes can be painful and puzzling as personal experiences, and society is not yet equipped to handle easily any of these six processes.The lawyers at Rubinstein & Holz have more than 75 years of combined experience helping our clients deal with all of the emotions of divorce. If you are feeling any of the following six overlapping stations, we can help."
+  },
+  {
+    "index": 3,
+    "picture": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZCUyMGxhdyUyMGV4cGVydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "Property Solicitor",
+    "description": "Property is an important aspect of our economic and social life and it also constitutes the resource of livelihood as well as security, our Property Lawyer is right here exactly to provide property law related services to help you preserve your rights under the laws of BangladeshProperty law is the most ancient as well as the most essential branch of law in Bangladesh. In Bangladesh, a vast number of disputes that are pending or creating considerable pressure on the court system is related to land. Owing to the significance of land in our life, the protection of our rights or ownership in our own land remains an important factor. However, by following land laws properly, a person can effectively protect his/her rights in property. "
+  },
+  {
+    "index": 4,
+    "picture": "https://media.istockphoto.com/id/1278728870/photo/at-the-meeting-a-team-of-lawyers-discussed-the-lawsuit-concept-of-law-and-justice.jpg?b=1&s=170667a&w=0&k=20&c=GpNXP8UL0tVOEJua7kLMKqVz7wJ_9-GBUGjhCu4yERc=",
+    "name": "Crime Case Solver",
+    "description": "The criminal process continues to be a tool for the politicized administration of law, as when political leaders focus it on activities deemed to ‘endanger the security of the state,’ or on other particular types of criminal activity. The formal rationality of the criminal process has been slowly increased in a criminal code and code of criminal procedure, but the extensive power of the police and the CCP over the criminal process have been only ineffectually restrained, and the police-administered system of sanctions begun under Mao remained in place in 2000"
+  },
+  {
+    "index": 5,
+    "picture": "https://media.istockphoto.com/id/1053040726/photo/know-your-rights.jpg?b=1&s=170667a&w=0&k=20&c=NB6DXBN-f1702QOSk5d90NQ8R0YciGcRRbPFMwhHxMo=",
+    "name": "Human Right expert",
+    "description": "International solidarity is the expression of a spirit of unity among individuals, peoples, States and international organizations. It encompasses the union of interests, purposes and actions and the recognition of different needs and rights to achieve common goals.International solidarity is a foundational principle underpinning contemporary international law in order to preserve international order and to ensure the survival of international society.The mandate of the Independent Expert on human rights and international solidarity was created in 2005 by the predecessor of the Human Rights Council, the United Nations Commission on Human Rights (see resolution 2005/55). The Human Rights Council extended the mandate for a further period of three years in 2014 (resolution 26/6), in 2017 (resolution 35/3), and in 2020 (resolution 44/11)."
+  },
+  {
+    "index": 6,
+    "picture": "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFkdmlzb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "name": "Advisor",
+    "description": "The Outotec® Process AdvisorProcess advisor has successfully been used for automatic control of flash smeltingSmelting furnace setpoints continuously for 5 years. This is one contribution that has enabled record long furnace campaign life due to the improved matte temperature control, which has prevented matte infiltration into the hearth. Building on this success, the Process Advisor has been enhanced to further utilize the online dynamic heat and material balance model also for other purposes than direct process controlProcess control. This paper covers some of the latest improvements taken into use after the initial startup. These include, for example, an online maximum feed rate estimator, which continuously updates the maximum feed rate possible for the operator and an online matte level estimator to get a better matte level estimate also between sounding."
+  }
+]
