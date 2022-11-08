@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SingleService = ({ service }) => {
-  const { picture, name, description } = service;
+  const { picture, name, description, _id } = service;
   return (
     <div className="card bg-dark-100 shadow-xl">
       <figure>
@@ -17,9 +18,10 @@ const SingleService = ({ service }) => {
             ? `${description.slice(0, 10)}...`
             : description}
         </p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div>
+        <div className="card-actions justify-center">
+          <Link to={`/allServices/${_id}`} className="btn btn-primary">
+            See Service Details
+          </Link>
         </div>
       </div>
     </div>
