@@ -32,40 +32,41 @@ const Addservice = () => {
       });
   };
   return (
-    <form
-      onSubmit={handleAddService}
-      className="flex flex-col
-     justify-center items-center h-screen"
-    >
-      <input
-        type="text"
-        name="name"
-        placeholder="Type here service name"
-        className="input border border-black w-full max-w-xs mb-5"
-      />
-      <input
-        type="text"
-        name="img"
-        placeholder="Type here service img url"
-        className="input border border-black w-full max-w-xs mb-5"
-      />
-      <input
-        type="email"
-        name="email"
-        defaultValue={user?.email}
-        placeholder="Type here service img url"
-        className="input border border-black w-full max-w-xs mb-5"
-      />
-      <textarea
-        name="description"
-        className="textarea textarea-primary"
-        placeholder="Type service description"
-      ></textarea>
-
-      <button type="submit" className="btn btn-primary mt-5">
-        Add service
-      </button>
-    </form>
+    <div>
+      <form
+        onSubmit={handleAddService}
+        className="grid grid-cols-2 container mx-auto items-center gap-5
+     h-screen"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Type here service name"
+          className="input border border-black w-full  mb-5"
+        />
+        <input
+          type="text"
+          name="img"
+          placeholder="Type here service img url"
+          className="input border border-black  max-w-xs mb-5"
+        />
+        <input
+          type="email"
+          name="email"
+          defaultValue={user?.email}
+          placeholder="Type here service img url"
+          className="input border border-black w-full  mb-5"
+        />
+        <textarea
+          name="description"
+          className="textarea-primary"
+          placeholder="Type service description"
+        ></textarea>
+        <button type="submit" className="btn btn-primary">
+          Add service
+        </button>
+      </form>
+    </div>
   );
 };
 
