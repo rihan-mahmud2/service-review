@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/ContextProvider";
+import { Title } from "../../Shared/Title";
 import SingleService from "./SingleService/SingleService";
 
 const AllServices = () => {
+  Title("all services");
   const services = useLoaderData();
   const { user } = useContext(AuthContext);
   return (

@@ -18,9 +18,26 @@ const Login = () => {
     logIn(email, password)
       .then((res) => {
         const user = res.user;
-        console.log(user);
+        const currentUser = {
+          email: user.email,
+        };
+
+        // implementing jwt in client
+
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("myToken", data.token);
+          })
+          .catch((err) => console.log(err.message));
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err.message));
   };
 
   useEffect(() => {

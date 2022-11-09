@@ -8,7 +8,11 @@ const Myrivews = () => {
   const [rivews, setRivews] = useState([]);
   Title("myrivews");
   useEffect(() => {
-    fetch(`http://localhost:5000/rivews?email=${user?.email}`)
+    fetch(`http://localhost:5000/rivews?email=${user?.email}`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("myToken")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setRivews(data));
   }, [user?.email]);
