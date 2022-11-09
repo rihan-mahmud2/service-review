@@ -4,7 +4,7 @@ import Rivews from "../../Rivews/Rivews";
 
 const ServiceDetails = () => {
   const SingleService = useLoaderData();
-  const { picture, name, description } = SingleService;
+  const { picture, index, name, description } = SingleService;
   return (
     <div>
       <section>
@@ -23,7 +23,7 @@ const ServiceDetails = () => {
         </div>
       </section>
       <section className="grid grid-cols-3 gap-5 container mx-auto">
-        <Rivews></Rivews>
+        <Rivews index={index}></Rivews>
       </section>
     </div>
   );
