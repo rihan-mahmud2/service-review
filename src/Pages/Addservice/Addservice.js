@@ -2,8 +2,10 @@ import { data } from "autoprefixer";
 import React, { useContext } from "react";
 import swal from "sweetalert";
 import { AuthContext } from "../../Context/ContextProvider";
+import { Title } from "../../Shared/Title";
 
 const Addservice = () => {
+  Title("add service");
   const { user } = useContext(AuthContext);
   const handleAddService = (e) => {
     e.preventDefault();

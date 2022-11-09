@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Context/ContextProvider";
+import { Title } from "../../Shared/Title";
 import Mysinglerivews from "./Mysinglerivews";
 
 const Myrivews = () => {
   const { user } = useContext(AuthContext);
   const [rivews, setRivews] = useState([]);
+  Title("myrivews");
   useEffect(() => {
     fetch(`http://localhost:5000/rivews?email=${user?.email}`)
       .then((res) => res.json())

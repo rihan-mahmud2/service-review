@@ -1,9 +1,11 @@
 import { data } from "autoprefixer";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Title } from "../../Shared/Title";
 import Services from "../Services/Services";
 import "./Home.css";
 const Home = () => {
+  Title("Home");
   const [services, setServices] = useState([]);
 
   useEffect(() => {
