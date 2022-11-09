@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import Home from "../Pages/Home/Home";
+import { AuthContext } from "../Context/ContextProvider";
 
 const NavHeader = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    logOut()
+      .then((res) => {})
+      .catch((err) => console.log(err));
+  };
   const navItems = [
     <li className="text-xl bolder">
       <Link to="/">HOME</Link>
     </li>,
+
     <li className="text-xl bolder">
-      <Link>Services</Link>
+      {user?.email ? (
+        <Link onClick={handleLogout}>Logout</Link>
+      ) : (
+        <Link to="/login">Login</Link>
+      )}
+    </li>,
+    <li className="text-xl bolder">
+      {user?.email ? <Link>My Rivews</Link> : null}
+    </li>,
+    <li className="text-xl bolder">
+      <Link to="/addservice">Add Services</Link>
+    </li>,
+    <li className="text-xl bolder">
+      {user ? <Link to="/addrivews">Add Rivews</Link> : null}
     </li>,
   ];
   return (
@@ -39,13 +59,13 @@ const NavHeader = () => {
               {navItems}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
         </div>
         <div className="navbar-start hidden lg:flex">
           <ul className="menu menu-horizontal p-0">{navItems}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Get started</a>
+          <Link className="btn">Get started</Link>
         </div>
       </div>
     </>

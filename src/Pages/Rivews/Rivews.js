@@ -13,7 +13,7 @@ const Rivews = ({ index }) => {
   console.log(index);
 
   return reviews.map((rivew) => (
-    <div className="grid grid-cols-3 gap-5 container mx-auto">
+    <div className="container mx-auto">
       <RivewDetails rivew={rivew} key={rivew._id}></RivewDetails>
     </div>
   ));
