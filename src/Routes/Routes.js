@@ -5,7 +5,9 @@ import AllServices from "../Pages/AllServices/AllServices";
 import ServiceDetails from "../Pages/AllServices/ServiceDetails/ServiceDetails";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
+import Myrivews from "../Pages/Myrivews/Myrivews";
 import Register from "../Pages/Register/Register";
+import Addrivews from "../Pages/Rivews/Addrivews";
 import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
@@ -41,6 +43,23 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <Addservice></Addservice>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/myrivews",
+        element: (
+          <PrivateRoutes>
+            <Myrivews></Myrivews>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/addrivews",
+        element: (
+          <PrivateRoutes>
+            {" "}
+            <Addrivews></Addrivews>
           </PrivateRoutes>
         ),
       },

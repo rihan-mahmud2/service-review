@@ -22,7 +22,7 @@ const NavHeader = () => {
       )}
     </li>,
     <li className="text-xl bolder">
-      {user?.email ? <Link>My Rivews</Link> : null}
+      {user?.email ? <Link to="/myrivews">My Rivews</Link> : null}
     </li>,
     <li className="text-xl bolder">
       <Link to="/addservice">Add Services</Link>

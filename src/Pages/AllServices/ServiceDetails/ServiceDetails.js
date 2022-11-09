@@ -1,9 +1,9 @@
-import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Rivews from "../../Rivews/Rivews";
 
 const ServiceDetails = () => {
   const SingleService = useLoaderData();
+
   const { picture, index, name, description } = SingleService;
   return (
     <div>
