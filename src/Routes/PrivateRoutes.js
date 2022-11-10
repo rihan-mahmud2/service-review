@@ -6,7 +6,11 @@ const PrivateRoutes = ({ children }) => {
   const location = useLocation();
   const { user, loading } = useContext(AuthContext);
   if (loading) {
-    return <h1>Loading.....</h1>;
+    return (
+      <div className="radial-progress" style={{ "--value": 70 }}>
+        70%
+      </div>
+    );
   }
 
   if (!user) {

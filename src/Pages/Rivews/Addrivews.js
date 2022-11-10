@@ -18,7 +18,7 @@ const Addrivews = () => {
       description,
     };
 
-    fetch("http://localhost:5000/rivews", {
+    fetch("https://service-reviews-server.vercel.app/rivews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

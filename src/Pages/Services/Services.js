@@ -1,11 +1,17 @@
 import React from "react";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 const Services = ({ service }) => {
   const { picture, name, description } = service;
   return (
     <div className="card bg-dark-100 shadow-xl">
       <figure>
-        <img src={picture} alt="Shoes" />
+        <PhotoProvider>
+          <PhotoView src={picture}>
+            <img src={picture} alt="Shoes" />
+          </PhotoView>
+        </PhotoProvider>
       </figure>
       <div className="card-body">
         <h2 className="card-title">
@@ -17,10 +23,6 @@ const Services = ({ service }) => {
             ? `${description.slice(0, 10)}...`
             : description}
         </p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div>
-        </div>
       </div>
     </div>
   );

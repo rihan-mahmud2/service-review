@@ -1,10 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 import { AuthContext } from "../../Context/ContextProvider";
 import { Title } from "../../Shared/Title";
 
 const Login = () => {
-  const { logIn, user } = useContext(AuthContext);
+  const { logIn, user, signWithGoogle } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
@@ -24,7 +25,7 @@ const Login = () => {
 
         // implementing jwt in client
 
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://service-reviews-server.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -38,6 +39,15 @@ const Login = () => {
           .catch((err) => console.log(err.message));
       })
       .catch((err) => console.log(err.message));
+  };
+
+  const handleGoogleSign = () => {
+    signWithGoogle()
+      .then((res) => {
+        const user = res.user;
+        console.log(user);
+      })
+      .catch((err) => swal(err.message));
   };
 
   useEffect(() => {
@@ -90,6 +100,9 @@ const Login = () => {
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Register</button>
+              <button onClick={handleGoogleSign} className="btn btn-primary">
+                Register with google
+              </button>
             </div>
           </form>
         </div>
