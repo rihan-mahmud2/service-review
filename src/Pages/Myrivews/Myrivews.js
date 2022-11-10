@@ -50,13 +50,19 @@ const Myrivews = () => {
           </tr>
         </thead>
         <tbody>
-          {rivews.map((rivew) => (
-            <Mysinglerivews
-              handleDelete={handleDelete}
-              rivew={rivew}
-              key={rivew._id}
-            ></Mysinglerivews>
-          ))}
+          {rivews.length === 0 ? (
+            <p className="text-red-500 h-screen text-center text-xl mt-10">
+              No rivews is added
+            </p>
+          ) : (
+            rivews.map((rivew) => (
+              <Mysinglerivews
+                handleDelete={handleDelete}
+                rivew={rivew}
+                key={rivew._id}
+              ></Mysinglerivews>
+            ))
+          )}
         </tbody>
       </table>
     </div>

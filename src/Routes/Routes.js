@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Addservice from "../Pages/Addservice/Addservice";
 import AllServices from "../Pages/AllServices/AllServices";
 import ServiceDetails from "../Pages/AllServices/ServiceDetails/ServiceDetails";
+import Faq from "../Pages/Faq/Faq";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Myrivews from "../Pages/Myrivews/Myrivews";
@@ -64,6 +65,10 @@ export const router = createBrowserRouter([
             <Addrivews></Addrivews>
           </PrivateRoutes>
         ),
+      },
+      {
+        path: "/faq",
+        element: <Faq></Faq>,
       },
     ],
   },

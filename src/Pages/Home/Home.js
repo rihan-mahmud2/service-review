@@ -1,9 +1,10 @@
-import { data } from "autoprefixer";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Title } from "../../Shared/Title";
 import Services from "../Services/Services";
 import "./Home.css";
+import img1 from "../../assets/home (1).jpg";
+import img2 from "../../assets/home (2).jpg";
 const Home = () => {
   Title("Home");
   const [services, setServices] = useState([]);
@@ -40,7 +41,17 @@ const Home = () => {
         </div>
       </section>
 
-      <section></section>
+      <section className="flex container mx-auto h-screen">
+        <div className="w-1/2 relative">
+          <img className="w-[500px] absolute top-10 " src={img1} alt=""></img>
+          <img
+            className="w-[300px] absolute h-[300px] top-10 lef-10"
+            src={img2}
+            alt=""
+          ></img>
+        </div>
+        <div>text</div>
+      </section>
 
       {/* //  there service section  */}
     </div>
