@@ -14,21 +14,24 @@ const NavHeader = () => {
       <Link to="/">HOME</Link>
     </li>,
 
-    <li className="text-xl bolder">
+    <li className="text-lg bolder">
+      {user?.email ? <Link to="/myrivews">My Rivews</Link> : null}
+    </li>,
+    <li className="text-lg bolder">
+      <Link to="/addservice">Add Services</Link>
+    </li>,
+    <li className="text-lg bolder">
+      {user ? <Link to="/addrivews">Add Rivews</Link> : null}
+    </li>,
+    <li className="text-lg bolder">
+      <Link to="/faq">Blog</Link>
+    </li>,
+    <li className="text-lg bolder">
       {user?.email ? (
         <Link onClick={handleLogout}>Logout</Link>
       ) : (
         <Link to="/login">Login</Link>
       )}
-    </li>,
-    <li className="text-xl bolder">
-      {user?.email ? <Link to="/myrivews">My Rivews</Link> : null}
-    </li>,
-    <li className="text-xl bolder">
-      <Link to="/addservice">Add Services</Link>
-    </li>,
-    <li className="text-xl bolder">
-      {user ? <Link to="/addrivews">Add Rivews</Link> : null}
     </li>,
   ];
   return (
@@ -54,18 +57,17 @@ const NavHeader = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-content rounded-box w-52"
             >
               {navItems}
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+          <Link className="btn btn-ghost normal-case text-xl">
+            Pro Advocate
+          </Link>
         </div>
-        <div className="navbar-start hidden lg:flex">
+        <div className="navbar-start hidden lg:flex bg-dark">
           <ul className="menu menu-horizontal p-0">{navItems}</ul>
-        </div>
-        <div className="navbar-end">
-          <Link className="btn">Get started</Link>
         </div>
       </div>
     </>

@@ -1,3 +1,4 @@
+import { data } from "autoprefixer";
 import React, { useContext } from "react";
 import swal from "sweetalert";
 import { AuthContext } from "../../Context/ContextProvider";
@@ -49,6 +50,13 @@ const Addrivews = () => {
           type="email"
           name="email"
           defaultValue={user?.email}
+          placeholder="Type here service img url"
+          className="input border border-black w-full  mb-5"
+        />
+        <input
+          type="date"
+          name="date"
+          defaultValue={new Date().getDate()}
           placeholder="Type here service img url"
           className="input border border-black w-full  mb-5"
         />

@@ -20,7 +20,7 @@ const Services = ({ service }) => {
         </h2>
         <p>
           {description.length > 100
-            ? `${description.slice(0, 10)}...`
+            ? `${description.slice(0, 100)}...`
             : description}
         </p>
       </div>

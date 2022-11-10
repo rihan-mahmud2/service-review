@@ -1,6 +1,6 @@
 import { TrashIcon } from "@heroicons/react/24/solid";
 import React from "react";
-import Other from "../Others/Other";
+import { Link } from "react-router-dom";
 
 const Mysinglerivews = ({ handleDelete, rivew }) => {
   const handleUpdate = () => {
@@ -19,7 +19,9 @@ const Mysinglerivews = ({ handleDelete, rivew }) => {
       <td>{rivew.email}</td>
       <td>{rivew.description}</td>
       <td onClick={handleUpdate}>
-        <Other></Other>
+        <div className="btn btn-primary">
+          <Link to={`/updaterivews/${rivew._id}`}>UpdateRIVEWS</Link>
+        </div>
       </td>
     </tr>
   );

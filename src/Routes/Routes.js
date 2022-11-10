@@ -7,6 +7,7 @@ import Faq from "../Pages/Faq/Faq";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Myrivews from "../Pages/Myrivews/Myrivews";
+import Other from "../Pages/Others/Other";
 import Register from "../Pages/Register/Register";
 import Addrivews from "../Pages/Rivews/Addrivews";
 import PrivateRoutes from "./PrivateRoutes";
@@ -69,6 +70,14 @@ export const router = createBrowserRouter([
       {
         path: "/faq",
         element: <Faq></Faq>,
+      },
+      {
+        path: "/updaterivews/:id",
+        element: <Other></Other>,
+        loader: ({ params }) =>
+          fetch(
+            `https://service-reviews-server.vercel.app/updaterivews/${params.id}`
+          ),
       },
     ],
   },

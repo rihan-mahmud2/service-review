@@ -41,16 +41,23 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex container mx-auto h-screen">
-        <div className="w-1/2 relative">
-          <img className="w-[500px] absolute top-10 " src={img1} alt=""></img>
+      <section className="flex container mx-auto h-screen justify-center mt-10">
+        <div className="md:w-1/2 w-[100%] relative">
+          <img className="w-[500px] absolute top-20 " src={img1} alt=""></img>
           <img
-            className="w-[300px] absolute h-[300px] top-10 lef-10"
+            className="w-[300px] absolute h-[300px] top-0 left-0"
             src={img2}
             alt=""
           ></img>
         </div>
-        <div>text</div>
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-xl text-green-400">
+            I am Samson having vast experience to solve different case
+          </h1>
+          <p>
+            Contact: <span>+99001111111</span>
+          </p>
+        </div>
       </section>
 
       {/* //  there service section  */}

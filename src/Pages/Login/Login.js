@@ -45,7 +45,19 @@ const Login = () => {
     signWithGoogle()
       .then((res) => {
         const user = res.user;
-        console.log(user);
+
+        fetch("https://service-reviews-server.vercel.app/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(user),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("myToken", data.token);
+          })
+          .catch((err) => console.log(err.message));
       })
       .catch((err) => swal(err.message));
   };
@@ -99,8 +111,11 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Register</button>
-              <button onClick={handleGoogleSign} className="btn btn-primary">
+              <button className="btn btn-primary">Login</button>
+              <button
+                onClick={handleGoogleSign}
+                className="btn btn-primary mt-3"
+              >
                 Register with google
               </button>
             </div>

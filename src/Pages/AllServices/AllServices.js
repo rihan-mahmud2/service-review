@@ -7,6 +7,7 @@ import SingleService from "./SingleService/SingleService";
 const AllServices = () => {
   Title("all services");
   const services = useLoaderData();
+
   const { user } = useContext(AuthContext);
   return (
     <div className="relative">
