@@ -9,7 +9,7 @@ const Services = ({ service }) => {
       <figure>
         <PhotoProvider>
           <PhotoView src={picture}>
-            <img src={picture} alt="Shoes" />
+            <img className="rounded-sm" src={picture} alt="Shoes" />
           </PhotoView>
         </PhotoProvider>
       </figure>

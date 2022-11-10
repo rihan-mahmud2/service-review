@@ -25,7 +25,7 @@ const Home = () => {
           See All Services
         </Link>
       </section>
-      <section>
+      <section className="container mx-auto">
         <div className="hero min-h-screen cover">
           <div className="hero-overlay bg-opacity-30"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -39,6 +39,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section></section>
 
       {/* //  there service section  */}
     </div>
