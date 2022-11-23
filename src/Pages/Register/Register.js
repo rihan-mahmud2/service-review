@@ -1,24 +1,47 @@
+import { data } from "autoprefixer";
+import { convertToHsl } from "daisyui/src/colors/functions";
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { sendImageToImagDb } from "../../api/uploadImage/uploadImage";
 import { AuthContext } from "../../Context/ContextProvider";
 import { Title } from "../../Shared/Title";
 
 const Register = () => {
+  const navigate = useNavigate();
   Title("Register");
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUser, setLoading } = useContext(AuthContext);
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
+    const image = form.image.files[0];
 
     createUser(email, password)
       .then((res) => {
         const user = res.user;
+        sendImageToImagDb(image)
+          .then((data) => {
+            updateUserProfile(name, data);
+            console.log(data);
+            setLoading(false);
+            navigate("/");
+          })
+          .catch((err) => console.log(err));
         console.log(user);
       })
       .catch((err) => console.log(err));
+  };
+
+  const updateUserProfile = (name, image) => {
+    updateUser(name, image)
+      .then((result) => {
+        navigate("/");
+      })
+      .then((res) => {
+        console.log(res);
+      });
   };
   return (
     <div className=" min-h-screen bg-base-200">
@@ -35,6 +58,18 @@ const Register = () => {
               <input
                 type="Name"
                 name="name"
+                placeholder="Name"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="file"
+                name="image"
                 placeholder="Name"
                 className="input input-bordered"
                 required

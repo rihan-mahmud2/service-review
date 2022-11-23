@@ -1,12 +1,18 @@
-import { useLoaderData } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../../Context/ContextProvider";
 import { Title } from "../../../Shared/Title";
+import Addrivews from "../../Rivews/Addrivews";
 import Rivews from "../../Rivews/Rivews";
 
 const ServiceDetails = () => {
+  const { user } = useContext(AuthContext);
+  const [reviews, setReviews] = useState([]);
+  const [isAdd, setIsAdd] = useState(false);
   Title("Service details");
   const SingleService = useLoaderData();
+  const { picture, name, description } = SingleService;
 
-  const { picture, index, name, description } = SingleService;
   return (
     <div>
       <section>
@@ -25,7 +31,27 @@ const ServiceDetails = () => {
         </div>
       </section>
       <section className="grid grid-cols-3 gap-5 container mx-auto">
-        <Rivews index={index}></Rivews>
+        <Rivews
+          isAdd={isAdd}
+          reviews={reviews}
+          setReviews={setReviews}
+          index={name}
+        ></Rivews>
+      </section>
+      <section className="container mx-auto my-24">
+        {user ? (
+          <Addrivews
+            setIsAdd={setIsAdd}
+            isAdd={isAdd}
+            rivews={reviews}
+            setRivews={setReviews}
+            SingleService={SingleService}
+          />
+        ) : (
+          <Link to="/login">
+            <button>Please Login To add rivews</button>{" "}
+          </Link>
+        )}
       </section>
     </div>
   );

@@ -3,11 +3,12 @@ import React from "react";
 
 const RivewDetails = ({ rivew }) => {
   return (
-    <div className="border shadow-xl p-5 relative">
+    <div className="shadow-xl p-5 relative min-h-full">
       <div>
         <div className="avatar absolute top-0 left-32">
           <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-            <img alt="" src={rivew?.picture} />
+            <img alt="" src={rivew?.image} />
+            <h1>{rivew?.name}</h1>
           </div>
         </div>
         <div className="mt-20">

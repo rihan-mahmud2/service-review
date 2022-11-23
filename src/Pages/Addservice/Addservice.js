@@ -21,7 +21,7 @@ const Addservice = () => {
       picture,
     };
 
-    fetch("https://service-reviews-server.vercel.app/allservices", {
+    fetch("http://localhost:5000/allservices", {
       method: "POST",
       headers: {
         "content-type": "application/json",

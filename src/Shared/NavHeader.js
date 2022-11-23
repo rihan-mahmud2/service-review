@@ -11,7 +11,7 @@ const NavHeader = () => {
   };
   const navItems = [
     <li className="text-xl bolder">
-      <Link to="/">HOME</Link>
+      <Link to="/">Home</Link>
     </li>,
 
     <li className="text-lg bolder">
@@ -20,9 +20,7 @@ const NavHeader = () => {
     <li className="text-lg bolder">
       <Link to="/addservice">Add Services</Link>
     </li>,
-    <li className="text-lg bolder">
-      {user ? <Link to="/addrivews">Add Rivews</Link> : null}
-    </li>,
+
     <li className="text-lg bolder">
       <Link to="/faq">Blog</Link>
     </li>,

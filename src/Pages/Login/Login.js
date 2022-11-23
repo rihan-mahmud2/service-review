@@ -5,7 +5,7 @@ import { AuthContext } from "../../Context/ContextProvider";
 import { Title } from "../../Shared/Title";
 
 const Login = () => {
-  const { logIn, user, signWithGoogle } = useContext(AuthContext);
+  const { logIn, user, signWithGoogle, setLoading } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
@@ -25,7 +25,7 @@ const Login = () => {
 
         // implementing jwt in client
 
-        fetch("https://service-reviews-server.vercel.app/jwt", {
+        fetch("http://localhost:5000/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -35,10 +35,11 @@ const Login = () => {
           .then((res) => res.json())
           .then((data) => {
             localStorage.setItem("myToken", data.token);
+            setLoading(false);
           })
           .catch((err) => console.log(err.message));
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => swal(err.message));
   };
 
   const handleGoogleSign = () => {
@@ -46,7 +47,7 @@ const Login = () => {
       .then((res) => {
         const user = res.user;
 
-        fetch("https://service-reviews-server.vercel.app/jwt", {
+        fetch("http://localhost:5000/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -56,6 +57,7 @@ const Login = () => {
           .then((res) => res.json())
           .then((data) => {
             localStorage.setItem("myToken", data.token);
+            setLoading(false);
           })
           .catch((err) => console.log(err.message));
       })

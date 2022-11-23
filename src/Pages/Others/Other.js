@@ -18,16 +18,13 @@ const Other = () => {
       des,
     };
 
-    fetch(
-      `https://service-reviews-server.vercel.app/updaterivews/${storedUser._id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updatedRivews),
-      }
-    )
+    fetch(`http://localhost:5000/updaterivews/${storedUser._id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedRivews),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
